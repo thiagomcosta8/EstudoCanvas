@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Ediçao de Desenho</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="HandheldFriendly" content="true">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+		<link href="css/estilo.css" rel="stylesheet">
+		<link href="css/range.css" rel="stylesheet">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="box">
+				<form>
+					<legend>
+						<b>EDIÇAO DE IMAGEM</b>
+					</legend>
+					<label for="nome">Nome</label><input type="text" id="nome" placeholder="Digite o nome...">
+					<label for="mudarFonte">Mudar Fonte</label><input type="checkbox" id="mudarFonte" value="">
+					<label for="luminosidade">Luminosidade</label><input type="range" id="luminosidade" max="200" value="100">
+					<label for="tamanho">Tamanho</label><input type="range" id="tamanho" max="200" value="100">
+					<label for="posicaoX">Posicao X</label><input type="range" id="posicaoX" min="-150" max="150" value="0">
+					<label for="posicaoY">Posicao Y</label><input type="range" id="posicaoY" min="-150" max="150" value="0">
+				</form>
+				<canvas id="quadroImagem" width="100%" height="100%"></canvas>
+				<!--<button onclick="saveImage()">Baixar</button>-->
+				<button onclick="encaminhar()">Baixar</button>
+			</div>
+			<div class="footer">
+				<sup>
+					Copyright 2022 | Este serviço é licenciado sob a <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a>.
+				</sup>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/main.js"></script>
+</html>
+
