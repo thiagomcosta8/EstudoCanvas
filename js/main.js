@@ -93,11 +93,13 @@ function encaminhar() {
 
     imagem = quadroImagem.toDataURL()
 
-    params = "imagem=" + imagem; 
+    params = new FormData();
+    params.append('imagem', imagem);
+    //params = "imagem=" + imagem; 
 
     http.open("POST", "salvar.php", false);
 
-    http.setRequestHeader("Content-type", "text/plain"); 
+    //http.setRequestHeader("Content-type", "text/plain"); 
 
     http.onreadystatechange = function() {
         if(http.readyState == 4 && http.status == 200) {
